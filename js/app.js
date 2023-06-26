@@ -34,3 +34,22 @@ document.getElementById('calculator').addEventListener('click',function(event){
 
 
 })
+document.getElementById('verify-pin').addEventListener('click',function(){
+    const generate_pin = document.getElementById('display-pin').value;
+    const write_pin = document.getElementById('typed-numbers').value;
+    const successMessage = document.getElementById('pin-success');
+    const failMessage = document.getElementById('pin-failure');
+    if(generate_pin == write_pin){
+        
+        successMessage.style.display = 'block';
+        failMessage.style.display = 'none';
+    }
+    else{
+        
+        successMessage.style.display = 'none';
+        failMessage.style.display = 'block';
+        
+    }
+    })
+
+
