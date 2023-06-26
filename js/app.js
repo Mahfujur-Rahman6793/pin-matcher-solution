@@ -13,3 +13,24 @@ document.getElementById('generate-pin').addEventListener('click',function(){
     const pinValue = getPin();
     document.getElementById('display-pin').value = pinValue;
 })
+document.getElementById('calculator').addEventListener('click',function(event){
+    // console.log(event.target.innerText);
+    const number = event.target.innerText; 
+
+    const calInput = document.getElementById('typed-numbers');
+    // check number or Not
+    if(isNaN(number)){
+        if(number == 'C'){
+            calInput.value = '';
+        }
+    }
+    else{
+        const previousCal = calInput.value;
+        const newCal = previousCal + number;
+        calInput.value = newCal;
+    }
+    // console.log(calInput);
+    
+
+
+})
